@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    function getComputerChoice() {
+      let items=["rock","paper","scissors"];
+      const randomitem = items[Math.floor(Math.random() * items.length)];
+      return randomitem;
+    }
+    console.log(getComputerChoice())
+
+    function oneRound() {
+        let playerSelection=prompt("choose your warior");
+        let computerSelection=getComputerChoice();
+
+        if (playerSelection.toLowerCase() === computerSelection) {
+            console.log("it is a tie!");}
+
+        else (playerSelection.tolowerCase()==="rock" )
+
+        
+    }
+
+  </script>
+</html>
