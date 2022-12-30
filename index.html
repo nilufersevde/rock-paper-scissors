@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>rock-paper-scissor</title>
 </head>
 <body>
 
@@ -19,14 +19,11 @@
 
 
     //plays a single round of rock paper scissors and returns a string 
-
-
-    playerScore=0;
-    compScore=0;
+    
 
     function playRound() {
-
-        const playerSelection="rock";
+        
+        const playerSelection=prompt("choose your warrior");
         const computerSelection=getComputerChoice();
     
         if (playerSelection === computerSelection) {
@@ -34,32 +31,32 @@
         }
 
         else if (playerSelection=="rock" && computerSelection=="scissors") {
-            console.log(playerScore+=1);
+            playerScore+=1;
             return "rock beats scissors you win!";
         }
 
         else if (playerSelection=="rock" && computerSelection=="paper") {
-            console.log(compScore+=1);
+            compScore+=1;
             return "paper beats rock you lose!";
         }
 
         else if (playerSelection=="paper" && computerSelection=="scissor") {
-            console.log(compScore+=1)
+            compScore+=1;
             return "scissors beats paper you lose!";
         }
 
         else if ( playerSelection=="paper" && computerSelection=="rock" ) {
-            console.log(playerScore+=1)
+            playerScore+=1;
             return "paper beats rock you win!";
         }
 
         else if ( playerSelection=="scissors" &&computerSelection=="paper") {
-            console.log(playerScore+=1)
+            playerScore+=1;
             return "scissors beats paper you win!";
         }
 
         else (playerSelection=="scissors" &&computerSelection=="rock") ;{
-            console.log(compScore+=1)
+            compScore+=1;
             return "rock beats scissors you lose!";
         }
    
@@ -69,14 +66,23 @@
 
     //plays 5 round of game, keeps the score and returns the winner
     function game() {
-        
-        for (let i=0;i<5;i=i++) {
-        
-            playRound() 
+        playerScore=0;
+        compScore=0;
+        for (let i = 0; i < 5; i++) {
+             console.log(playRound())
+             console.log("playersscore=",playerScore)
+             console.log("computersscore=",compScore)
+        }
+        if (playerScore>compScore) {
+            console.log("yeyy")
+        }
+        else {
+            console.log("noo")
         }
     }
+    
+    game()
 
-    console.log(game())
 
   </script>
 </html>
