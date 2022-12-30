@@ -8,24 +8,75 @@
 
 </body>
 <script>
+
+    //making computer choose a random warrior out of rock paper scissors 
     function getComputerChoice() {
       let items=["rock","paper","scissors"];
       const randomitem = items[Math.floor(Math.random() * items.length)];
       return randomitem;
     }
-    console.log(getComputerChoice())
+    
 
-    function oneRound() {
-        let playerSelection=prompt("choose your warior");
-        let computerSelection=getComputerChoice();
 
-        if (playerSelection.toLowerCase() === computerSelection) {
-            console.log("it is a tie!");}
+    //plays a single round of rock paper scissors and returns a string 
 
-        else (playerSelection.tolowerCase()==="rock" )
 
-        
+    playerScore=0;
+    compScore=0;
+
+    function playRound() {
+
+        const playerSelection="rock";
+        const computerSelection=getComputerChoice();
+    
+        if (playerSelection === computerSelection) {
+            return("it is a tie!");
+        }
+
+        else if (playerSelection=="rock" && computerSelection=="scissors") {
+            console.log(playerScore+=1);
+            return "rock beats scissors you win!";
+        }
+
+        else if (playerSelection=="rock" && computerSelection=="paper") {
+            console.log(compScore+=1);
+            return "paper beats rock you lose!";
+        }
+
+        else if (playerSelection=="paper" && computerSelection=="scissor") {
+            console.log(compScore+=1)
+            return "scissors beats paper you lose!";
+        }
+
+        else if ( playerSelection=="paper" && computerSelection=="rock" ) {
+            console.log(playerScore+=1)
+            return "paper beats rock you win!";
+        }
+
+        else if ( playerSelection=="scissors" &&computerSelection=="paper") {
+            console.log(playerScore+=1)
+            return "scissors beats paper you win!";
+        }
+
+        else (playerSelection=="scissors" &&computerSelection=="rock") ;{
+            console.log(compScore+=1)
+            return "rock beats scissors you lose!";
+        }
+   
     }
+
+
+
+    //plays 5 round of game, keeps the score and returns the winner
+    function game() {
+        
+        for (let i=0;i<5;i=i++) {
+        
+            playRound() 
+        }
+    }
+
+    console.log(game())
 
   </script>
 </html>
