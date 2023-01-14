@@ -5,11 +5,15 @@
     <title>rock-paper-scissor</title>
 </head>
 <body>
-
+    <h2>choose your fighter!</h2>
+     <button class="rock">rock</button>
+     <button class="paper">paper</button>
+     <button class="scissors">scissors</button>
+     <div id="winner"></div>
 </body>
 <script>
 
-    //making computer choose a random warrior out of rock paper scissors 
+    //making computer choose a random warrior out of rock,paper,scissors 
     function getComputerChoice() {
       let items=["rock","paper","scissors"];
       const randomitem = items[Math.floor(Math.random() * items.length)];
@@ -18,12 +22,12 @@
     
 
 
-    //plays a single round of rock paper scissors and returns a string 
+    //plays a single round of rock,paper,scissors, keeps the score of player and computer, returns a string implying if the player won or not 
     
-
+    playerScore=0;
+    compScore=0;
     function playRound() {
         
-        const playerSelection=prompt("choose your warrior");
         const computerSelection=getComputerChoice();
     
         if (playerSelection === computerSelection) {
@@ -40,7 +44,7 @@
             return "paper beats rock you lose!";
         }
 
-        else if (playerSelection=="paper" && computerSelection=="scissor") {
+        else if (playerSelection=="paper" && computerSelection=="scissors") {
             compScore+=1;
             return "scissors beats paper you lose!";
         }
@@ -55,33 +59,53 @@
             return "scissors beats paper you win!";
         }
 
-        else (playerSelection=="scissors" &&computerSelection=="rock") ;{
+        else if (playerSelection=="scissors" &&computerSelection=="rock") {
             compScore+=1;
             return "rock beats scissors you lose!";
+        }
+        
+
+        else {
+            return "you should choose from rock,paper,scissors";
         }
    
     }
 
 
-
-    //plays 5 round of game, keeps the score and returns the winner
-    function game() {
-        playerScore=0;
-        compScore=0;
-        for (let i = 0; i < 5; i++) {
-             console.log(playRound())
-             console.log("playersscore=",playerScore)
-             console.log("computersscore=",compScore)
-        }
-        if (playerScore>compScore) {
-            console.log("yeyy")
-        }
-        else {
-            console.log("noo")
-        }
-    }
     
-    game()
+    
+   
+    let rock=document.querySelector(".rock");
+    let paper=document.querySelector(".paper");
+    let scissors=document.querySelector(".scissors");
+
+    rock.addEventListener("click", event => {
+        playerSelection="rock";
+        playRound();
+        let winner=playRound();
+        document.getElementById("winner").innerHTML = winner;
+        
+    });
+    paper.addEventListener("click", event => {
+        playerSelection="paper";
+        playRound();
+        let winner=playRound();
+        document.getElementById("winner").innerHTML = winner;
+        
+    });
+    scissors.addEventListener("click", event => {
+        playerSelection="scissors";
+        playRound();
+        let winner=playRound();
+        document.getElementById("winner").innerHTML = winner;
+        
+    });
+
+
+    
+    
+    
+
 
 
   </script>
