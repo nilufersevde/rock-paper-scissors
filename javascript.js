@@ -145,7 +145,7 @@
             document.getElementById("winner").innerHTML =""
             playerScore=0;
             compScore=0;
-            document.getElementById("result").innerHTML="YOU LOS THE GAME!";
+            document.getElementById("result").innerHTML="YOU LOST THE GAME!";
             
         }
 
