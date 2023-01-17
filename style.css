@@ -1,7 +1,7 @@
 body {
     background-color: rgb(52, 13, 13);
     color:aliceblue;
-    font-family: fantasy;
+    font-family: gameover;
     }
     
 
@@ -22,7 +22,7 @@ body {
     background-color: rgb(40, 35, 35);
     font-size: 100px;
     gap:50px;
-    font-family: fantasy;
+    font-family: gameover;
 
 }
 
@@ -31,7 +31,7 @@ body {
     justify-content: center;
     margin: 50px;
     font-size: 20px;
-    font-family: fantasy;
+    font-family: gameover;
 }
 
 .button {
@@ -41,7 +41,7 @@ body {
     background-color: rgb(175, 121, 54);
     font-size: 30px;
     border-radius: 30px;
-    font-family: fantasy;
+    font-family: gameover;
 }
     
 
@@ -61,21 +61,21 @@ button:hover {
     gap:50px;
     margin-top: 70px;
     margin-bottom: 70px;
-    font-family: fantasy;
+    font-family: gameover;
 }
 
 #result {
     display:flex;
     justify-content: center;
     font-size: 30px;
-    font-family: fantasy;
+    font-family: gameover;
 }
 
 .tip {
     text-align: center;
     margin-bottom: 50px;
     font-size: 30px;
-    font-family: fantasy;
+    font-family: gameover;
 }
 
 .score {
