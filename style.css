@@ -1,7 +1,6 @@
 body {
     background-color: rgb(52, 13, 13);
     color:aliceblue;
-    font-family: gameover;
     }
     
 
@@ -22,7 +21,7 @@ body {
     background-color: rgb(40, 35, 35);
     font-size: 100px;
     gap:50px;
-    font-family: gameover;
+    font-family:papyrus, fantasy,"Bradley Hand",Monaco;
 
 }
 
@@ -31,7 +30,7 @@ body {
     justify-content: center;
     margin: 50px;
     font-size: 20px;
-    font-family: gameover;
+    font-family:papyrus, fantasy,"Bradley Hand",Monaco;
 }
 
 .button {
@@ -41,7 +40,7 @@ body {
     background-color: rgb(175, 121, 54);
     font-size: 30px;
     border-radius: 30px;
-    font-family: gameover;
+    font-family:papyrus, fantasy,"Bradley Hand",Monaco;
 }
     
 
@@ -61,21 +60,20 @@ button:hover {
     gap:50px;
     margin-top: 70px;
     margin-bottom: 70px;
-    font-family: gameover;
+    font-family:papyrus, fantasy,"Bradley Hand",Monaco;
 }
 
 #result {
     display:flex;
     justify-content: center;
     font-size: 30px;
-    font-family: gameover;
+    font-family:papyrus, fantasy,"Bradley Hand",Monaco;
 }
-
 .tip {
     text-align: center;
     margin-bottom: 50px;
     font-size: 30px;
-    font-family: gameover;
+    font-family:papyrus, fantasy,"Bradley Hand",Monaco;
 }
 
 .score {
